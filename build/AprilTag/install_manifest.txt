@@ -1,0 +1,3 @@
+/home/david/AprilTag-ROS-2-camera/install/AprilTag/bin/apriltag_demo
+/home/david/AprilTag-ROS-2-camera/install/AprilTag/bin/maketags
+/home/david/AprilTag-ROS-2-camera/install/AprilTag/lib/libapriltag.so

@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -Wsign-compare -g -march=native  -std=gnu99 -rdynamic CMakeFiles/maketags.dir/contrib/maketags.c.o -o ../bin/maketags  -Wl,-rpath,/home/david/AprilTag-ROS-2-camera/build/AprilTag/lib: ../lib/libapriltag.so -lm 

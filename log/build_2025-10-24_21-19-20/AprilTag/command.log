@@ -1,0 +1,4 @@
+Invoking command in '/home/david/AprilTag-ROS-2-camera/build/AprilTag': /usr/bin/cmake --build /home/david/AprilTag-ROS-2-camera/build/AprilTag -- -j20 -l20
+Invoked command in '/home/david/AprilTag-ROS-2-camera/build/AprilTag' returned '0': /usr/bin/cmake --build /home/david/AprilTag-ROS-2-camera/build/AprilTag -- -j20 -l20
+Invoking command in '/home/david/AprilTag-ROS-2-camera/build/AprilTag': /usr/bin/cmake --install /home/david/AprilTag-ROS-2-camera/build/AprilTag
+Invoked command in '/home/david/AprilTag-ROS-2-camera/build/AprilTag' returned '0': /usr/bin/cmake --install /home/david/AprilTag-ROS-2-camera/build/AprilTag

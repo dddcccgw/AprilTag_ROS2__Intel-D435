@@ -1,0 +1,18 @@
+[35m[1mConsolidate compiler generated dependencies of target apriltag[0m
+[ 73%] Built target apriltag
+[35m[1mConsolidate compiler generated dependencies of target pose_test[0m
+[35m[1mConsolidate compiler generated dependencies of target apriltag_demo[0m
+[35m[1mConsolidate compiler generated dependencies of target maketags[0m
+[35m[1mConsolidate compiler generated dependencies of target lm_test[0m
+[35m[1mConsolidate compiler generated dependencies of target contour_test[0m
+[35m[1mConsolidate compiler generated dependencies of target pdf_test[0m
+[ 77%] Built target lm_test
+[ 82%] Built target contour_test
+[ 86%] Built target apriltag_demo
+[ 91%] Built target pose_test
+[ 95%] Built target maketags
+[100%] Built target pdf_test
+-- Install configuration: ""
+-- Up-to-date: /home/david/AprilTag-ROS-2-camera/install/AprilTag/bin/apriltag_demo
+-- Up-to-date: /home/david/AprilTag-ROS-2-camera/install/AprilTag/bin/maketags
+-- Up-to-date: /home/david/AprilTag-ROS-2-camera/install/AprilTag/lib/libapriltag.so
