@@ -1,0 +1,5 @@
+[console_scripts]
+apriltag_map = apriltag_detector.apriltag_map:main
+camera_validator = apriltag_detector.camera_position_validator:main
+record_calibration = apriltag_detector.record_calibration_data:main
+

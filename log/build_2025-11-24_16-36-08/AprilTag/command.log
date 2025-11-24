@@ -1,0 +1,4 @@
+Invoking command in '/home/david/AprilTag_ROS2_intel-D435/build/AprilTag': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/david/AprilTag_ROS2_intel-D435/build/AprilTag -- -j20 -l20
+Invoked command in '/home/david/AprilTag_ROS2_intel-D435/build/AprilTag' returned '0': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/david/AprilTag_ROS2_intel-D435/build/AprilTag -- -j20 -l20
+Invoking command in '/home/david/AprilTag_ROS2_intel-D435/build/AprilTag': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/david/AprilTag_ROS2_intel-D435/build/AprilTag
+Invoked command in '/home/david/AprilTag_ROS2_intel-D435/build/AprilTag' returned '0': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/david/AprilTag_ROS2_intel-D435/build/AprilTag

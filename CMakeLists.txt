@@ -1,34 +1,29 @@
-project(AprilTag C CXX)
+cmake_minimum_required(VERSION 3.8)
+project(apriltag_ros2_intel_d435)
 
-cmake_minimum_required ( VERSION 2.8 )
+# Find dependencies
+find_package(ament_cmake REQUIRED)
 
-if (POLICY CMP0042)
-cmake_policy(SET CMP0042 NEW)
-endif(POLICY CMP0042)
+# Find ROS 2 packages
+find_package(apriltag_detector QUIET)
 
-find_package (Threads REQUIRED)
+# Uncomment if you have other ament_cmake packages
+# find_package(apriltag_msgs QUIET)
+# find_package(apriltag_ros QUIET)
 
-set(EXTRA_FLAGS "-Wall -Wsign-compare -g -march=native ${CMAKE_THREAD_LIBS_INIT}")
-set(EXTRA_C_FLAGS "${EXTRA_FLAGS} -std=gnu99")
+# This is a metapackage
+ament_cmake_core_register_metapackage()
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${EXTRA_FLAGS}")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${EXTRA_C_FLAGS}")
+# Find and register all packages
+if(BUILD_TESTING)
+  find_package(ament_cmake_copyright REQUIRED)
+  find_package(ament_cmake_flake8 REQUIRED)
+  find_package(ament_cmake_pep257 REQUIRED)
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+  ament_copyright()
+  ament_flake8(EXCLUDE build install)
+  ament_pep257(EXCLUDE build install)
+endif()
 
-if(APPLE)
-  SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
-endif(APPLE)
-
-add_subdirectory(src)
-include_directories(src src/common src/contrib)
-
-include(FindPkgConfig)
-pkg_search_module(OPENCV opencv>=2.3)
-
-if(OPENCV_FOUND)
-  include_directories(${OPENCV_INCLUDE_DIRS})
-  add_subdirectory(src/opencv)
-endif(OPENCV_FOUND)
+ament_package()
 

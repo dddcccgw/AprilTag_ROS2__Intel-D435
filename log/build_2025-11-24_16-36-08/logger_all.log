@@ -1,0 +1,97 @@
+[0.063s] colcon DEBUG Command line arguments: ['/usr/bin/colcon', 'build']
+[0.063s] colcon DEBUG Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7ef42ca79ae0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ef42ca794e0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ef42ca794e0>>, mixin_verb=('build',))
+[0.159s] colcon.colcon_core.package_discovery Level 1 discover_packages(colcon_meta) check parameters
+[0.159s] colcon.colcon_core.package_discovery Level 1 discover_packages(recursive) check parameters
+[0.159s] colcon.colcon_core.package_discovery Level 1 discover_packages(ignore) check parameters
+[0.159s] colcon.colcon_core.package_discovery Level 1 discover_packages(path) check parameters
+[0.159s] colcon.colcon_core.package_discovery Level 1 discover_packages(colcon_meta) discover
+[0.159s] colcon.colcon_core.package_discovery Level 1 discover_packages(recursive) discover
+[0.159s] colcon.colcon_core.package_discovery INFO Crawling recursively for packages in '/home/david/AprilTag_ROS2_intel-D435'
+[0.159s] colcon.colcon_core.package_identification Level 1 _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'ignore'
+[0.159s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'ignore_ament_install'
+[0.159s] colcon.colcon_core.package_identification Level 1 _identify(.) by extensions ['colcon_pkg']
+[0.159s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'colcon_pkg'
+[0.159s] colcon.colcon_core.package_identification Level 1 _identify(.) by extensions ['colcon_meta']
+[0.159s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'colcon_meta'
+[0.159s] colcon.colcon_core.package_identification Level 1 _identify(.) by extensions ['ros']
+[0.159s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'ros'
+[0.164s] colcon.colcon_core.package_identification Level 1 _identify(.) by extensions ['cmake', 'python']
+[0.164s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'cmake'
+[0.171s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'python'
+[0.171s] colcon.colcon_core.package_identification DEBUG Package '.' with type 'cmake' and name 'AprilTag'
+[0.171s] colcon.colcon_core.package_discovery Level 1 discover_packages(recursive) using defaults
+[0.171s] colcon.colcon_core.package_discovery Level 1 discover_packages(ignore) discover
+[0.171s] colcon.colcon_core.package_discovery Level 1 discover_packages(ignore) using defaults
+[0.171s] colcon.colcon_core.package_discovery Level 1 discover_packages(path) discover
+[0.171s] colcon.colcon_core.package_discovery Level 1 discover_packages(path) using defaults
+[0.179s] colcon.colcon_core.package_discovery Level 1 discover_packages(prefix_path) check parameters
+[0.179s] colcon.colcon_core.package_discovery Level 1 discover_packages(prefix_path) discover
+[0.180s] colcon.colcon_installed_package_information.package_discovery DEBUG Found 12 installed packages in /home/david/ros2_ws/install
+[0.180s] colcon.colcon_installed_package_information.package_discovery DEBUG Found 12 installed packages in /home/david/moveit2_UR5/install
+[0.181s] colcon.colcon_installed_package_information.package_discovery DEBUG Found 460 installed packages in /opt/ros/humble
+[0.182s] colcon.colcon_core.package_discovery Level 1 discover_packages(prefix_path) using defaults
+[0.205s] colcon.colcon_core.verb Level 5 set package 'AprilTag' build argument 'cmake_args' from command line to 'None'
+[0.205s] colcon.colcon_core.verb Level 5 set package 'AprilTag' build argument 'cmake_target' from command line to 'None'
+[0.205s] colcon.colcon_core.verb Level 5 set package 'AprilTag' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.205s] colcon.colcon_core.verb Level 5 set package 'AprilTag' build argument 'cmake_clean_cache' from command line to 'False'
+[0.205s] colcon.colcon_core.verb Level 5 set package 'AprilTag' build argument 'cmake_clean_first' from command line to 'False'
+[0.205s] colcon.colcon_core.verb Level 5 set package 'AprilTag' build argument 'cmake_force_configure' from command line to 'False'
+[0.205s] colcon.colcon_core.verb Level 5 set package 'AprilTag' build argument 'ament_cmake_args' from command line to 'None'
+[0.205s] colcon.colcon_core.verb Level 5 set package 'AprilTag' build argument 'catkin_cmake_args' from command line to 'None'
+[0.205s] colcon.colcon_core.verb Level 5 set package 'AprilTag' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.205s] colcon.colcon_core.verb DEBUG Building package 'AprilTag' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/david/AprilTag_ROS2_intel-D435/build/AprilTag', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag', 'merge_install': False, 'path': '/home/david/AprilTag_ROS2_intel-D435', 'symlink_install': False, 'test_result_base': None}
+[0.205s] colcon.colcon_core.executor INFO Executing jobs using 'parallel' executor
+[0.206s] colcon.colcon_parallel_executor.executor.parallel DEBUG run_until_complete
+[0.206s] colcon.colcon_cmake.task.cmake.build INFO Building CMake package in '/home/david/AprilTag_ROS2_intel-D435'
+[0.207s] colcon.colcon_core.plugin_system INFO Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.207s] colcon.colcon_core.shell INFO Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.207s] colcon.colcon_core.shell DEBUG Skip shell extension 'dsv' for command environment
+[0.213s] colcon.colcon_core.event_handler.log_command DEBUG Invoking command in '/home/david/AprilTag_ROS2_intel-D435/build/AprilTag': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/david/AprilTag_ROS2_intel-D435/build/AprilTag -- -j20 -l20
+[0.552s] colcon.colcon_core.event_handler.log_command DEBUG Invoked command in '/home/david/AprilTag_ROS2_intel-D435/build/AprilTag' returned '0': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/david/AprilTag_ROS2_intel-D435/build/AprilTag -- -j20 -l20
+[0.556s] colcon.colcon_core.event_handler.log_command DEBUG Invoking command in '/home/david/AprilTag_ROS2_intel-D435/build/AprilTag': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/david/AprilTag_ROS2_intel-D435/build/AprilTag
+[0.564s] colcon.colcon_core.environment Level 1 create_environment_scripts_only(AprilTag)
+[0.564s] colcon.colcon_core.event_handler.log_command DEBUG Invoked command in '/home/david/AprilTag_ROS2_intel-D435/build/AprilTag' returned '0': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/david/AprilTag_ROS2_intel-D435/build/AprilTag
+[0.566s] colcon.colcon_core.environment Level 1 checking '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag' for CMake module files
+[0.566s] colcon.colcon_core.environment Level 1 checking '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag' for CMake config files
+[0.567s] colcon.colcon_core.environment Level 1 checking '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/lib'
+[0.567s] colcon.colcon_core.shell Level 1 create_environment_hook('AprilTag', 'ld_library_path_lib')
+[0.567s] colcon.colcon_core.shell INFO Creating environment hook '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/share/AprilTag/hook/ld_library_path_lib.ps1'
+[0.567s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/share/AprilTag/hook/ld_library_path_lib.dsv'
+[0.568s] colcon.colcon_core.shell INFO Creating environment hook '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/share/AprilTag/hook/ld_library_path_lib.sh'
+[0.568s] colcon.colcon_core.environment Level 1 checking '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/bin'
+[0.568s] colcon.colcon_core.shell Level 1 create_environment_hook('AprilTag', 'path')
+[0.568s] colcon.colcon_core.shell INFO Creating environment hook '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/share/AprilTag/hook/path.ps1'
+[0.569s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/share/AprilTag/hook/path.dsv'
+[0.569s] colcon.colcon_core.shell INFO Creating environment hook '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/share/AprilTag/hook/path.sh'
+[0.569s] colcon.colcon_core.environment Level 1 checking '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/lib/pkgconfig/AprilTag.pc'
+[0.569s] colcon.colcon_core.environment Level 1 checking '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/lib/python3.10/site-packages'
+[0.570s] colcon.colcon_core.environment Level 1 checking '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/bin'
+[0.570s] colcon.colcon_core.shell Level 1 create_environment_hook('AprilTag', 'pythonscriptspath')
+[0.570s] colcon.colcon_core.shell INFO Creating environment hook '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/share/AprilTag/hook/pythonscriptspath.ps1'
+[0.570s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/share/AprilTag/hook/pythonscriptspath.dsv'
+[0.570s] colcon.colcon_core.shell INFO Creating environment hook '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/share/AprilTag/hook/pythonscriptspath.sh'
+[0.571s] colcon.colcon_core.shell INFO Creating package script '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/share/AprilTag/package.ps1'
+[0.572s] colcon.colcon_core.shell INFO Creating package descriptor '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/share/AprilTag/package.dsv'
+[0.572s] colcon.colcon_core.shell INFO Creating package script '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/share/AprilTag/package.sh'
+[0.572s] colcon.colcon_core.shell INFO Creating package script '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/share/AprilTag/package.bash'
+[0.573s] colcon.colcon_core.shell INFO Creating package script '/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/share/AprilTag/package.zsh'
+[0.573s] colcon.colcon_core.environment Level 1 create_file_with_runtime_dependencies(/home/david/AprilTag_ROS2_intel-D435/install/AprilTag/share/colcon-core/packages/AprilTag)
+[0.573s] colcon.colcon_parallel_executor.executor.parallel DEBUG closing loop
+[0.573s] colcon.colcon_parallel_executor.executor.parallel DEBUG loop closed
+[0.573s] colcon.colcon_parallel_executor.executor.parallel DEBUG run_until_complete finished with '0'
+[0.573s] colcon.colcon_core.event_reactor DEBUG joining thread
+[0.577s] colcon.colcon_core.plugin_system INFO Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.578s] colcon.colcon_core.plugin_system INFO Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.578s] colcon.colcon_notification.desktop_notification INFO Sending desktop notification using 'notify2'
+[0.583s] colcon.colcon_core.event_reactor DEBUG joined thread
+[0.583s] colcon.colcon_core.shell INFO Creating prefix script '/home/david/AprilTag_ROS2_intel-D435/install/local_setup.ps1'
+[0.583s] colcon.colcon_core.shell INFO Creating prefix util module '/home/david/AprilTag_ROS2_intel-D435/install/_local_setup_util_ps1.py'
+[0.584s] colcon.colcon_core.shell INFO Creating prefix chain script '/home/david/AprilTag_ROS2_intel-D435/install/setup.ps1'
+[0.584s] colcon.colcon_core.shell INFO Creating prefix script '/home/david/AprilTag_ROS2_intel-D435/install/local_setup.sh'
+[0.585s] colcon.colcon_core.shell INFO Creating prefix util module '/home/david/AprilTag_ROS2_intel-D435/install/_local_setup_util_sh.py'
+[0.585s] colcon.colcon_core.shell INFO Creating prefix chain script '/home/david/AprilTag_ROS2_intel-D435/install/setup.sh'
+[0.585s] colcon.colcon_core.shell INFO Creating prefix script '/home/david/AprilTag_ROS2_intel-D435/install/local_setup.bash'
+[0.586s] colcon.colcon_core.shell INFO Creating prefix chain script '/home/david/AprilTag_ROS2_intel-D435/install/setup.bash'
+[0.586s] colcon.colcon_core.shell INFO Creating prefix script '/home/david/AprilTag_ROS2_intel-D435/install/local_setup.zsh'
+[0.586s] colcon.colcon_core.shell INFO Creating prefix chain script '/home/david/AprilTag_ROS2_intel-D435/install/setup.zsh'
