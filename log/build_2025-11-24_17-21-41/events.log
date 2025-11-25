@@ -1,3 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.000234] (-) JobUnselected: {'identifier': 'apriltag_ros2_intel_d435'}
-[0.000258] (-) EventReactorShutdown: {}

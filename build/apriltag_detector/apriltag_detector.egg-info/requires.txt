@@ -1,6 +1,0 @@
-dt-apriltags
-numpy
-opencv-python
-pyrealsense2
-scipy
-setuptools

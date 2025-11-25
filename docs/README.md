@@ -8,11 +8,11 @@ This is a ROS2 Package/standalone Python implementation for **multi-AprilTag det
 ## � Screenshots & Visual Guide
 
 ### 🔧 Physical Setup
-![Physical Setup](images/setup.png)
+![Physical Setup](setup.png)
 *Hardware configuration showing Intel RealSense D435 camera mounted on tripod with three AprilTags (ID: 0, 1, 2) mounted on a vertical board with grid paper for precise positioning*
 
 ### 🎯 Program: `my_camera_apriltag.py` - Multi-Tag Tracking & Map Frame
-![AprilTag Map Frame Visualization](images/my_camera_apriltag.png)
+![AprilTag Map Frame Visualization](my_camera_apriltag.png)
 *Real-time multi-tag tracking showing 3 AprilTags with map frame coordinate system. Features include:*
 - *Live camera feed with detected tags (ID 0, 1, 2) highlighted with colored borders*
 - *3D coordinate axes (RGB) overlaid on each tag showing orientation*
@@ -22,11 +22,11 @@ This is a ROS2 Package/standalone Python implementation for **multi-AprilTag det
 - *Map frame established with Tag 0 as the origin*
 
 ### 📊 Program: `record_calibration_data.py` - Hand-Eye Calibration
-![Calibration Data Recording](images/record_calibration_data.png)
+![Calibration Data Recording](record_calibration_data.png)
 *Interactive hand-eye calibration data collection showing synchronized camera-tag poses and robot end-effector positions for computing camera-to-robot transformation*
 
 ### ✅ Program: `camera_position_validation.py` - Position Validator
-![Position Validation Pass](images/camera-position_validator.png)
+![Position Validation Pass](camera-position_validator.png)
 *Position validation showing ALL CHECKS PASSED with detailed error metrics:*
 - *Camera position validated: [-0.0814, 0.0493, -0.5819] m with 14.41 mm error ✓*
 - *Tag 0 [ORIGIN]: Perfect match at (0.000, 0.000, 0.000) m*
@@ -149,8 +149,8 @@ pip3 install -e .
 
 **Method 3: ROS 2 workspace build**
 ```bash
-cd ~/AprilTag_ROS2_intel-D435/ros2_ws
-colcon build --symlink-install
+cd ~/AprilTag_ROS2_intel-D435
+colcon build --base-paths apriltag_detector --symlink-install
 source install/setup.bash
 ```
 
@@ -607,76 +607,6 @@ ros2 run apriltag_detector record_calibration
 ```
 
 **Output:** `data/camera_poses.npy`, `data/robot_poses.npy`
-
----
-
-## 📁 Organized Project Structure
-
-```
-AprilTag_ROS2_intel-D435/
-├── README.md                                   # Main documentation
-├── STRUCTURE.md                                # Project structure guide
-├── .gitignore                                  # Git ignore rules
-├── CMakeLists.txt                              # Legacy build file
-├── package.xml                                 # Legacy manifest
-├── Makefile                                    # Build shortcuts
-│
-├── docs/                                       # 📚 All documentation
-│   ├── APRILTAG_DETECTOR_SUMMARY.md
-│   ├── SETUP_GUIDE.md
-│   ├── ROS2_SETUP.md
-│   ├── DOCKER_SETUP.md
-│   ├── PROJECT_INDEX.md
-│   └── LICENSE.md
-│
-├── docker_config/                              # 🐳 Docker configuration
-│   ├── Dockerfile
-│   ├── docker-compose.yml
-│   ├── docker-compose.prod.yml
-│   ├── docker-setup.sh
-│   └── .dockerignore
-│
-├── images/                                     # 🖼️ Screenshots and diagrams
-│   ├── setup.png
-│   ├── my_camera_apriltag.png
-│   ├── camera-position_validator.png
-│   └── record_calibration_data.png
-│
-├── config/                                     # ⚙️ Configuration files
-│   ├── apriltag_map.json
-│   └── target_location_tag3.json
-│
-├── scripts/                                    # 🔧 Utility scripts
-│   ├── install.sh
-│   ├── uninstall.sh
-│   ├── setup_apriltag_detector.sh
-│   ├── verify-ros2-setup.sh
-│   ├── my_camera_apriltag.py                   # Standalone scripts
-│   ├── camera-position_validator.py
-│   └── record_calibration_data.py
-│
-├── camera_info/                                # Camera calibration files
-├── data/                                       # Generated data
-│
-└── ros2_ws/                                    # 🤖 ROS 2 Workspace (MAIN)
-    ├── src/                                    # ROS 2 source packages
-    │   ├── apriltag/                           # AprilTag C library
-    │   ├── apriltag_detector/                  # Main Python package
-    │   │   ├── apriltag_detector/
-    │   │   │   ├── apriltag_map.py
-    │   │   │   ├── camera_position_validator.py
-    │   │   │   └── record_calibration_data.py
-    │   │   ├── package.xml
-    │   │   ├── setup.py
-    │   │   └── pyproject.toml
-    │   ├── apriltag_msgs/                      # ROS message definitions
-    │   ├── apriltag_ros/                       # Additional ROS integration
-    │   ├── image_pipeline/                     # Image processing tools
-    │   └── vision_opencv/                      # OpenCV-ROS bridge
-    ├── build/                                  # Build artifacts (gitignored)
-    ├── install/                                # Installed packages (gitignored)
-    └── log/                                    # Build logs (gitignored)
-```
 
 ---
 
