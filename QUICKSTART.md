@@ -1,190 +1,124 @@
-# 🚀 快速开始指南
+# 🚀 Quick Start Guide
 
-## 项目已整理完成 ✅
-
-项目结构已经重新整理，更加清晰易用！
-
----
-
-## 📁 新的项目结构
-
-```
-AprilTag_ROS2_intel-D435/
-├── README.md              # 完整文档
-├── QUICKSTART.md          # 本文件 - 快速开始
-├── STRUCTURE.md           # 详细结构说明
-├── ros2_ws/              # ROS 2 工作空间 ⭐
-│   └── src/              # 所有 ROS 2 包
-├── docs/                 # 所有文档
-├── docker_config/        # Docker 配置
-├── images/               # 图片资源
-├── config/               # 配置文件
-├── scripts/              # 脚本工具
-├── camera_info/          # 相机标定
-└── data/                 # 生成数据
-```
+## Prerequisites
+- Intel RealSense D435 camera connected
+- ROS 2 Humble installed
+- Python dependencies installed
 
 ---
 
-## ⚡ 快速使用（3 步骤）
+## ⚡ Quick Start (3 Steps)
 
-### 1️⃣ 构建 ROS 2 工作空间
+### 1️⃣ Build ROS 2 Workspace
 
 ```bash
-cd ~/AprilTag_ROS2_intel-D435/ros2_ws
-colcon build --symlink-install
+cd ~/AprilTag_ROS2__Intel-D435/ros2_ws
+colcon build --packages-select apriltag_detector
 ```
 
-### 2️⃣ 激活环境
+### 2️⃣ Source Environment
 
 ```bash
-source ~/AprilTag_ROS2_intel-D435/ros2_ws/install/setup.bash
+source ~/AprilTag_ROS2__Intel-D435/ros2_ws/install/setup.bash
 ```
 
-**提示**: 将这行加入 `~/.bashrc` 以自动激活：
+**Tip**: Add this to `~/.bashrc` for automatic sourcing:
 ```bash
-echo "source ~/AprilTag_ROS2_intel-D435/ros2_ws/install/setup.bash" >> ~/.bashrc
+echo "source ~/AprilTag_ROS2__Intel-D435/ros2_ws/install/setup.bash" >> ~/.bashrc
 ```
 
-### 3️⃣ 运行程序
+### 3️⃣ Run Programs
 
+**Option A: ROS 2 Commands (Recommended)**
 ```bash
-# 多标签地图跟踪
+# Multi-tag tracking & map frame
 ros2 run apriltag_detector apriltag_map
 
-# 位置验证
+# Camera position validation
 ros2 run apriltag_detector camera_validator
 
-# 手眼标定数据采集
+# Hand-eye calibration data recording
 ros2 run apriltag_detector record_calibration
 ```
 
+**Option B: Standalone Scripts**
+```bash
+cd ~/AprilTag_ROS2__Intel-D435/scripts
+
+# Multi-tag tracking
+python3 my_camera_apriltag.py
+
+# Position validation
+python3 camera_position_validation.py
+
+# Calibration data recording
+python3 record_calibration_data.py
+```
+
 ---
 
-## 🔧 常用命令
+## 🔧 Common Commands
 
-### 重新构建
+### Rebuild Package
 
 ```bash
-cd ~/AprilTag_ROS2_intel-D435/ros2_ws
-rm -rf build install log
-colcon build --symlink-install
+cd ~/AprilTag_ROS2__Intel-D435/ros2_ws
+colcon build --packages-select apriltag_detector
 source install/setup.bash
 ```
 
-### 检查包是否安装
+### Check Package Installation
 
 ```bash
-ros2 pkg list | grep apriltag
+ros2 pkg executables apriltag_detector
 ```
 
-应该显示：
+Should show:
 ```
-apriltag_detector
-apriltag_msgs
-```
-
-### 查看可用命令
-
-```bash
-ros2 run apriltag_detector <TAB><TAB>
+apriltag_detector apriltag_map
+apriltag_detector camera_validator
+apriltag_detector record_calibration
 ```
 
 ---
 
-## 📚 详细文档
+## ❓ Troubleshooting
 
-- **完整说明**: 查看 `README.md`
-- **项目结构**: 查看 `STRUCTURE.md`
-- **安装指南**: 查看 `docs/SETUP_GUIDE.md`
-- **ROS 2 设置**: 查看 `docs/ROS2_SETUP.md`
-- **Docker 部署**: 查看 `docs/DOCKER_SETUP.md`
+### Issue: `No executable found`
 
----
-
-## 🐳 使用 Docker（可选）
-
+**Solution**:
 ```bash
-cd ~/AprilTag_ROS2_intel-D435/docker_config
-docker-compose up
-```
-
----
-
-## ❓ 故障排除
-
-### 问题: `Package 'apriltag_detector' not found`
-
-**解决方案**:
-```bash
-cd ~/AprilTag_ROS2_intel-D435/ros2_ws
+cd ~/AprilTag_ROS2__Intel-D435/ros2_ws
+colcon build --packages-select apriltag_detector
 source install/setup.bash
 ```
 
-### 问题: 构建失败
+### Issue: Camera not found
 
-**解决方案**:
+**Solution**:
 ```bash
-cd ~/AprilTag_ROS2_intel-D435/ros2_ws
-rm -rf build install log
-colcon build --symlink-install
+rs-enumerate-devices  # Check camera
+# Reconnect USB cable (use USB 3.0 port)
 ```
 
-### 问题: 找不到相机
+### Issue: `ModuleNotFoundError`
 
-**解决方案**:
+**Solution**:
 ```bash
-# 检查 RealSense 相机
-rs-enumerate-devices
-
-# 重新插拔 USB 连接
+pip install opencv-python numpy pyrealsense2 dt-apriltags scipy
 ```
 
 ---
 
-## 📊 整理改进
+## 💾 Output Files
 
-### ✨ 改进项
-
-- ✅ 清晰的 ROS 2 工作空间结构 (`ros2_ws/`)
-- ✅ 文档集中管理 (`docs/`)
-- ✅ 配置分离 (`config/`, `docker_config/`)
-- ✅ 资源整理 (`images/`, `scripts/`)
-- ✅ 添加 `.gitignore` 忽略构建产物
-- ✅ 标准的 ROS 2 工作空间布局
-
-### 📈 使用对比
-
-**整理前**:
-```bash
-cd ~/AprilTag_ROS2_intel-D435
-colcon build --base-paths apriltag_detector
-source install/setup.bash
-ros2 run apriltag_detector apriltag_map
-```
-
-**整理后**:
-```bash
-cd ~/AprilTag_ROS2_intel-D435/ros2_ws
-colcon build
-source install/setup.bash
-ros2 run apriltag_detector apriltag_map
-```
-
-更加清晰和标准！
+- `apriltag_map.json` - Tag positions in map frame
+- `data/camera_poses.npy` - Calibration camera poses
+- `data/robot_poses.npy` - Calibration robot poses
 
 ---
 
-## 🎯 下一步
+For detailed documentation, see [README.md](README.md)
 
-1. 阅读完整的 `README.md`
-2. 查看 `STRUCTURE.md` 了解项目结构
-3. 根据需求运行相应程序
-4. 查看 `docs/` 获取详细文档
-
----
-
-**整理完成日期**: 2025年11月25日  
-**状态**: ✅ 可以正常使用
-
-如有问题，请查看 `README.md` 的故障排除部分。
+**Updated**: November 26, 2025  
+**Status**: ✅ Fully operational
