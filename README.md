@@ -37,7 +37,7 @@ This is a ROS2 Package/standalone Python implementation for **multi-AprilTag det
 
 ---
 
-## �📦 Features
+## 📦 Features
 
 ### ✨ Advanced Capabilities
 - **Multi-Tag Tracking**: Simultaneously detect and track multiple AprilTags (configurable IDs)
