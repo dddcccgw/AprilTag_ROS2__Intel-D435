@@ -5,7 +5,7 @@ This is a ROS2 Package/standalone Python implementation for **multi-AprilTag det
 
 ---
 
-## � Screenshots & Visual Guide
+##  Screenshots & Visual Guide
 
 ### 🔧 Physical Setup
 ![Physical Setup](images/setup.png)
